@@ -1,8 +1,10 @@
 # RedisHelper - .Net Core
 
+![Nuget](https://img.shields.io/nuget/dt/RedisHelper)
+
 ### Introduction
 
-Redis Helper is a simple way to handle caching items in Redis.
+Redis Helper is a simple way to handle caching items in Redis.  It utilizes `IDistributedCache` to help handle caching of items.
 
 
 ### Documentation
