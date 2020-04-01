@@ -9,6 +9,18 @@ Redis Helper is a simple way to handle caching items in Redis.
 
 #### Installation / Setup
 
+You can install RedisHelper through Nuget package manager by running the following:
+
+```
+Install-Package RedisHelper -Version 1.0.0
+```
+
+If you use the dotnet CLI you can use the following:
+
+```
+dotnet add package RedisHelper
+```
+
 ##### appsettings.json
 
 In your appsettings.json you'll need to include the following entry to connect to your redis installation
@@ -52,7 +64,7 @@ public HomeController(RedisHelper.Cache.RedisHelper redisHelper)
 
 #### Storing Items In The Cache
 
-You may use the `put` method to store items in the cache.  The `put` method requires you to set an expiration in seconds.
+You may use the `Put` method to store items in the cache.  The `Put` method requires you to set an expiration in seconds.
 
 When using RedisHelper in the DI container you can use the following:
 
@@ -61,9 +73,32 @@ var seconds = 10;
 _redisHelper.Put("key", "value", seconds);
 ```
 
-To store an item that does not expire you can use the `forever` method.  This will store an item in cache until it is removed manually
+To store an item that does not expire you can use the `Forever` method.  This will store an item in cache until it is removed manually
 
 ```
 _redisHelper.Forever("key", "value");
 ```
 
+#### Retrieving Items From The Cache
+
+The `Get` method is used to retrieve items from the cache.  If the item does not exist in the cache, `null` will be returned.
+
+```
+_redisHelper.Get("key");
+```
+
+#### Removing Items From The Cache
+
+You may remove items from the cache using the `forget` method:
+
+```
+_redisHelper.Forget("key")
+```
+
+#### Checking For Item Existence
+
+The `Exists` method can be used to determine if an item exists in the cache.  If the value is `null` this method will return `false`
+
+```
+_redisHelper.Exists("key");
+```
