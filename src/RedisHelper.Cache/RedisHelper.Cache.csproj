@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>RedisHelper</PackageId>
+    <Authors>Dan Rovito</Authors>
+    <Copyright>2020</Copyright>
+    <Description>A .Net Core 3.1 library that adds simple functionality for distributed redis caching.</Description>
+    <PackageProjectUrl>https://github.com/danrovito/redishelper-dotnetcore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/danrovito/redishelper-dotnetcore</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>redis, .net, core, cache</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

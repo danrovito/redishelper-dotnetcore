@@ -5,7 +5,7 @@ using Microsoft.Extensions.Caching.Distributed;
 
 namespace RedisHelper.Cache
 {
-    class RedisHelper
+    public class RedisHelper
     {
         private readonly IDistributedCache _cache;
 
