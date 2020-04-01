@@ -10,6 +10,8 @@
     <RepositoryUrl>https://github.com/danrovito/redishelper-dotnetcore</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>redis, .net, core, cache</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
   </PropertyGroup>
 
   <ItemGroup>
