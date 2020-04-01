@@ -35,3 +35,35 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
+#### Usage
+
+#### Dependency Injection
+
+You can utilize depency injection to bring the RedisHelper into your controller.  An example when using RedisHelper in your HomeController can be seen here:
+
+```
+private readonly RedisHelper.Cache.RedisHelper _redisHelper;
+
+public HomeController(RedisHelper.Cache.RedisHelper redisHelper)
+{
+    _redisHelper = redisHelper;
+}
+```
+
+#### Storing Items In The Cache
+
+You may use the `put` method to store items in the cache.  The `put` method requires you to set an expiration in seconds.
+
+When using RedisHelper in the DI container you can use the following:
+
+```
+var seconds = 10;
+_redisHelper.Put("key", "value", seconds);
+```
+
+To store an item that does not expire you can use the `forever` method.  This will store an item in cache until it is removed manually
+
+```
+_redisHelper.Forever("key", "value");
+```
+
