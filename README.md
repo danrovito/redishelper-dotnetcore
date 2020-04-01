@@ -102,3 +102,7 @@ The `Exists` method can be used to determine if an item exists in the cache.  If
 ```csharp
 _redisHelper.Exists("key");
 ```
+
+### License
+
+RedisHelper is open-sourced software licensed under the [MIT License](https://opensource.org/licenses/MIT)
